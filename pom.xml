@@ -20,7 +20,6 @@
     <modules>
         <module>shared</module>
         <module>jvm</module>
-        <module>js</module>
         <module>generate</module>
         <module>assembly</module>
     </modules>

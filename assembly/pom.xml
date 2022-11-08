@@ -15,11 +15,6 @@
             <artifactId>kotlinx-html-jvm</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.jetbrains.kotlinx</groupId>
-            <artifactId>kotlinx-html-js</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -39,24 +34,6 @@
                                 <descriptor>src/main/assembly/jvm.xml</descriptor>
                                 <descriptor>src/main/assembly/webjar.xml</descriptor>
                             </descriptors>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>js-only</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptor>src/main/assembly/js.xml</descriptor>
-                            <archive>
-                                <manifest>
-                                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                                </manifest>
-                                <manifestEntries>
-                                    <Kotlin-JS-Module-Name>kotlinx-html-js-assembly</Kotlin-JS-Module-Name>
-                                </manifestEntries>
-                            </archive>
                         </configuration>
                     </execution>
                 </executions>
